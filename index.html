@@ -2,13 +2,45 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>あ</title>
+    <title>たぬきちのページ</title>
     <style>
-        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        h1 { font-size: 10rem; }
+        body {
+            background-color: #f4f1ea; /* 少し温かみのある背景色 */
+            font-family: sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        .profile-card {
+            background-color: white;
+            max-width: 400px;
+            margin: 0 auto; /* 画面の中央に配置 */
+            padding: 20px;
+            border-radius: 15px; /* 角を丸くする */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 少し影をつける */
+        }
+        img {
+            width: 100%; /* カードの幅に合わせて写真を表示 */
+            border-radius: 10px;
+        }
+        p {
+            text-align: left; /* 文章は左揃え */
+            line-height: 1.6; /* 行間を少し広くして読みやすく */
+        }
     </style>
 </head>
 <body>
-    <h1>たぬきち</h1>
+    <div class="profile-card">
+        <h1>たぬきち</h1>
+        
+        <!-- ▼ 写真を表示するタグ ▼ -->
+        <img src="tanukichi.jpg" alt="たぬきちの写真">
+        
+        <!-- ▼ プロフィール文章 ▼ -->
+        <p><strong>職業：</strong> たぬき開発 社長（元 不動産屋）</p>
+        <p><strong>口癖：</strong> 「〜だも」</p>
+        <p><strong>自己紹介：</strong><br>
+        みなさん、こんにちは！無人島移住パッケージプランへようこそだも。<br>
+        お家の増築からマイホームのローンのご相談まで、なんでも任せてほしいんだも！</p>
+    </div>
 </body>
 </html>
