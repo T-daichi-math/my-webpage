@@ -4,43 +4,122 @@
     <meta charset="UTF-8">
     <title>たぬきちのページ</title>
     <style>
+        /* ▼ 全体の背景と文字の基本設定 ▼ */
         body {
-            background-color: #f4f1ea; /* 少し温かみのある背景色 */
+            background-color: #f0f7e6; /* 葉っぱのような淡い緑色 */
+            color: #4a3a2b; /* 文字は茶色 */
             font-family: sans-serif;
-            text-align: center;
-            padding: 40px;
+            margin: 0;
+            padding: 40px 20px;
         }
+
+        /* ▼ メインのカード部分 ▼ */
         .profile-card {
-            background-color: white;
-            max-width: 400px;
+            background-color: #ffffff;
+            max-width: 600px; /* 前より少し広く（長く）しました */
             margin: 0 auto; /* 画面の中央に配置 */
-            padding: 20px;
-            border-radius: 15px; /* 角を丸くする */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 少し影をつける */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border: 4px solid #8fc27c; /* たぬき開発っぽい緑の枠線 */
+            
+            /* ふわっと浮かび上がるアニメーションの設定 */
+            animation: fadeIn 1.5s ease-out;
         }
+
+        /* アニメーションの動きの定義 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ▼ 画像の設定 ▼ */
         img {
-            width: 100%; /* カードの幅に合わせて写真を表示 */
+            width: 100%;
+            border-radius: 15px;
+            transition: transform 0.3s; /* マウスを乗せた時の動きの準備 */
+        }
+        
+        img:hover {
+            transform: scale(1.05); /* マウスを乗せると写真が少し大きくなる！ */
+        }
+
+        /* ▼ 見出し（h1, h2）の設定 ▼ */
+        h1 {
+            text-align: center;
+            color: #568246; /* 濃い緑色 */
+            border-bottom: 2px dashed #8fc27c; /* 下線を点線に */
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #d18a38; /* オレンジがかった茶色 */
+            margin-top: 30px;
+        }
+
+        /* ▼ 文章とリストの設定 ▼ */
+        p, li {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        ul {
+            background-color: #faf5eb; /* リストの背景を少し変える */
+            padding: 20px 20px 20px 40px;
             border-radius: 10px;
         }
-        p {
-            text-align: left; /* 文章は左揃え */
-            line-height: 1.6; /* 行間を少し広くして読みやすく */
+
+        /* ▼ 押せるボタン風のデザイン ▼ */
+        .button {
+            display: block;
+            text-align: center;
+            background-color: #d18a38;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #b07028; /* マウスを乗せると色が濃くなる */
         }
     </style>
 </head>
 <body>
     <div class="profile-card">
-        <h1>たぬきち</h1>
+        <h1>たぬきち (Tom Nook)</h1>
         
-        <!-- ▼ 写真を表示するタグ ▼ -->
+        <!-- 写真はそのまま表示されます -->
         <img src="tanukichi.jpg" alt="たぬきちの写真">
         
-        <!-- ▼ プロフィール文章 ▼ -->
-        <p><strong>職業：</strong> たぬき開発 社長（不動産屋）</p>
-        <p><strong>口癖：</strong> 「〜だなも」</p>
-        <p><strong>自己紹介：</strong><br>
-        みなさん、こんにちは！無人島移住パッケージプランへようこそだなも。<br>
-        お家の増築からマイホームのローンのご相談まで、なんでも任せてほしいんだなも！</p>
+        <h2>🍃 基本情報</h2>
+        <ul>
+            <li><strong>職業：</strong> たぬき開発（Nook Inc.）社長</li>
+            <li><strong>座右の銘：</strong> 「あきんどは ゆきをふって もうける」</li>
+            <li><strong>口癖：</strong> 「だなも！」</li>
+            <li><strong>家族構成：</strong> まめきち・つぶきち（双子の弟子）</li>
+        </ul>
+
+        <h2>🏕️ たぬき開発の主な事業</h2>
+        <p>
+            かつては村の小さな商店を営んでいましたが、現在は不動産からインフラ整備まで手掛ける大企業「たぬき開発」の社長として大活躍しています。
+        </p>
+        <ul>
+            <li>無人島移住パッケージプランの企画・運営</li>
+            <li>マイホームの建築・増築・リフォーム</li>
+            <li>島内のインフラ整備（橋や坂の建設など）</li>
+            <li>たぬきマイレージプログラムの提供</li>
+        </ul>
+
+        <h2>💬 たぬきちからのメッセージ</h2>
+        <p>
+            「みなさん、こんにちは！無人島移住パッケージプランへようこそだなも。<br>
+            最初はテント生活かもしれないけれど、ローンを組めば素敵なお家も夢じゃないんだも！<br>
+            お支払いはベルでもマイルでも、あなたのペースで大丈夫だから安心してほしいだなも〜！」
+        </p>
+
+        <!-- リンクボタンの追加 -->
+        <a href="#" class="button">💰 マイホームのローンを相談する</a>
     </div>
 </body>
 </html>
